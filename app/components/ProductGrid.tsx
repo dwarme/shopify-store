@@ -20,8 +20,6 @@ const ProductGrid: React.FC<{collection: Collection; url: string}> = ({
   const fetcher = useFetcher();
 
   function fetchMoreProducts() {
-    // ?index differentiates index routes from their parent layout routes
-    // https://remix.run/docs/en/v1/guides/routing#what-is-the-index-query-param
     fetcher.load(`${url}?index&cursor=${endCursor}`);
   }
 
